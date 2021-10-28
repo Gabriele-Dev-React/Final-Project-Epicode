@@ -1,0 +1,107 @@
+<!-- <div class="card" style="width: 30rem" *ngFor="let item of fatture.content"></div> -->
+
+<div class="row" *ngFor="let item of fatture.content">
+  <div class="col">
+    <div class="card border-primary mb-3">
+      <div class="card-body text-primary">
+        <ul class="list-group list-group-flush">
+          <div class="card-header">FATTURA N° {{ item.numero }}</div>
+          <li class="list-group-item">DATA: {{ item.data }}</li>
+          <li class="list-group-item">ANNO: {{ item.anno }}</li>
+          <li class="list-group-item">IMPORTO FATTURA: {{ item.importo }}€</li>
+          <li class="list-group-item">STATO FATTURA: {{ item.stato.nome }}</li>
+          <li class="list-group-item">
+            RAGIONE SOCIALE: {{ item.cliente.ragioneSociale }}
+          </li>
+          <li class="list-group-item">
+            PARTITA IVA: {{ item.cliente.partitaIva }}
+          </li>
+          <li class="list-group-item">
+            TIPO CLIENTE: {{ item.cliente.tipoCliente }}
+          </li>
+          <li class="list-group-item">E-MAIL: {{ item.cliente.email }}</li>
+          <li class="list-group-item">PEC: {{ item.cliente.pec }}</li>
+          <li class="list-group-item">TELEFONO: {{ item.cliente.telefono }}</li>
+          <li class="list-group-item">
+            NOME CONTATTO: {{ item.cliente.nomeContatto }}
+          </li>
+          <li class="list-group-item">
+            COGNOME CONTATTO: {{ item.cliente.conomeContatto }}
+          </li>
+          <li class="list-group-item">
+            TELEFONO CONTATTO: {{ item.cliente.telefonoContatto }}
+          </li>
+          <li class="list-group-item">
+            EMAIL CONTATTO: {{ item.cliente.emailContatto }}
+          </li>
+          <h4>INDIRIZZO SEDE OEPRATIVA</h4>
+          <li class="list-group-item">
+            VIA: {{ item.cliente.indirizzoSedeOperativa.via }}
+          </li>
+          <li class="list-group-item">
+            CIVICO: {{ item.cliente.indirizzoSedeOperativa.civico }}
+          </li>
+          <li class="list-group-item">
+            CAP: {{ item.cliente.indirizzoSedeOperativa.cap }}
+          </li>
+          <li class="list-group-item">
+            LOCALITA: {{ item.cliente.indirizzoSedeOperativa.localita }}
+          </li>
+          <li class="list-group-item">
+            COMUNE: {{ item.cliente.indirizzoSedeOperativa.comune.nome }}
+          </li>
+          <li class="list-group-item">
+            PROVINCIA:
+            {{ item.cliente.indirizzoSedeOperativa.comune.provincia.nome }} -
+            ({{ item.cliente.indirizzoSedeOperativa.comune.provincia.sigla }})
+          </li>
+          <h4>INDIRIZZO SEDE LEGALE</h4>
+          <li class="list-group-item">
+            VIA: {{ item.cliente.indirizzoSedeLegale.via }}
+          </li>
+          <li class="list-group-item">
+            CIVICO: {{ item.cliente.indirizzoSedeLegale.civico }}
+          </li>
+          <li class="list-group-item">
+            CAP: {{ item.cliente.indirizzoSedeLegale.cap }}
+          </li>
+          <li class="list-group-item">
+            LOCALITA: {{ item.cliente.indirizzoSedeLegale.localita }}
+          </li>
+          <li class="list-group-item">
+            COMUNE: {{ item.cliente.indirizzoSedeLegale.comune.nome }}
+          </li>
+          <li class="list-group-item">
+            PROVINCIA:
+            {{ item.cliente.indirizzoSedeLegale.comune.provincia.nome }} - ({{
+              item.cliente.indirizzoSedeLegale.comune.provincia.sigla
+            }})
+          </li>
+        </ul>
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Basic mixed styles example"
+        >
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            [routerLink]="['/nuovafattura']"
+          >
+            Crea una nuova Fattura
+          </button>
+          <button type="button" class="btn btn-outline-warning">
+            Modifica Fattura
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-danger"
+            (click)="deleteFatture(item)"
+          >
+            Rimuovi Fattura
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

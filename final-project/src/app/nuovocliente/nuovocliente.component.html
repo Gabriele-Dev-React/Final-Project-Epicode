@@ -1,0 +1,231 @@
+<form class="container">
+  <h1>NUOVA ANAGRAFICA</h1>
+  <div class="mb-3">
+    <label for="name" class="form-label">Ragione Sociale</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="cliente.ragioneSociale"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">Partita Iva</label>
+    <input
+      type="text"
+      name="username"
+      class="form-control"
+      id="username"
+      [(ngModel)]="cliente.partitaIva"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Tipo Cliente</label>
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      id="email"
+      [(ngModel)]="cliente.tipoCliente"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">E-mail</label>
+    <input
+      type="text"
+      name="phone"
+      class="form-control"
+      id="phone"
+      [(ngModel)]="cliente.email"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Pec</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.pec"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Telefono</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.telefono"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Nome Contatto</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.nomeContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Cognome Contatto</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.cognomeContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Telefono Contatto</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.telefonoContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">E-mail Contatto</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.emailContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <h2>SEDE OPERATIVA</h2>
+    <label for="website" class="form-label">Via</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.indirizzoSedeOperativa.via"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Civico</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.indirizzoSedeOperativa.civico"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Cap</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.indirizzoSedeOperativa.cap"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Località</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.indirizzoSedeOperativa.localita"
+    />
+  </div>
+  <h2>SEDE LEGALE</h2>
+  <div class="mb-3">
+    <label for="website" class="form-label">Via</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.indirizzoSedeLegale.via"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Civico</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.indirizzoSedeLegale.civico"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Cap</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.indirizzoSedeLegale.cap"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Località</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.indirizzoSedeLegale.localita"
+    />
+  </div>
+  <h3>Comune</h3>
+  <select class="browser-default custom-select">
+    <option selected *ngFor="let item of comune.content">
+      {{ item.nome }}
+    </option>
+  </select>
+
+  <h3>Informazioni utili sull'inserimento</h3>
+  <div class="mb-3">
+    <label for="website" class="form-label">Data Inserimento</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.dataInserimento"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Ultimo Contatto</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.dataUltimoContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="website" class="form-label">Fatturato Annuale</label>
+    <input
+      type="text"
+      name="website"
+      class="form-control"
+      id="website"
+      [(ngModel)]="cliente.fatturatoAnnuale"
+    />
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    (click)="saveCliente()"
+    [routerLink]="['/clienti']"
+  >
+    Registrati
+  </button>
+</form>

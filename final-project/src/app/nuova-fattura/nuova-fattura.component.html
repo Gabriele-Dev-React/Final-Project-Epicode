@@ -1,0 +1,188 @@
+<form class="container">
+  <h1>Creazione Nuova Fattura</h1>
+
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Numero Fattura</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.numero"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Anno Fattura</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.anno"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Importo Fattura</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.importo"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Ragione Sociale</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.ragioneSociale"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">PartitaIva</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.partitaIva"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Tipo Cliente</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.tipoCliente"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Email Cliente</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.email"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">PEC Cliente</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.pec"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Telefono Cliente</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.telefono"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Nome Contatto</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.nomeContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Cognome Contatto</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.cognomeContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Telefono Contatto</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.telefonoContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Email Contatto</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.emailContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Indirizzo Sede Operativa</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.indirizzoSedeOperativa"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Indirizzo Sede Legale</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.indirizzoSedeLegale"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Data Inserimento</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.dataInserimento"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Data Ultimo Contatto</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.dataUltimoContatto"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="companyname" class="form-label">Fatturato Annuale</label>
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      id="name"
+      [(ngModel)]="fattura.fatturatoAnnuale"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="saveFattura()">
+    Salva
+  </button>
+</form>

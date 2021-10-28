@@ -1,0 +1,60 @@
+<!-- <ul >
+  <li>{{ item.id }}</li>
+  <li>{{ item.nomeContatto }}</li>
+  <li>{{ item.telefono }}</li>
+  <li>{{ item.tipoCliente }}</li>
+</ul> -->
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">NomeContatto</th>
+      <th scope="col">CognomeContatto</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">TipoCliente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of clienti.content">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.nomeContatto }}</td>
+      <td>{{ item.cognomeContatto }}</td>
+      <td>{{ item.telefono }}</td>
+      <td>{{ item.tipoCliente }}</td>
+      <button type="button" class="btn btn-info" (click)="updateClienti(item)">
+        Modifica
+      </button>
+      <button
+        (click)="rimuoviCliente(item)"
+        type="button"
+        class="btn btn-outline-danger"
+      >
+        Elimina
+      </button>
+      <button type="button" class="btn btn-warning" [routerLink]="['/fatture']">
+        Visualizza Fattura
+      </button>
+    </tr>
+  </tbody>
+</table>
+
+<nav aria-label="...">
+  <ul class="pagination pagination-circle">
+    <li class="page-item">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+        >Precedente</a
+      >
+    </li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="#"
+        >1 <span class="visually-hidden">(current)</span></a
+      >
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Successiva</a>
+    </li>
+  </ul>
+</nav>
